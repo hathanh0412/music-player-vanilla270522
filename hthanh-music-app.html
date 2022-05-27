@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./hthanh-music-app.css" />
+    <title>Music App Vanilla Training 2</title>
+  </head>
+  <body>
+    <h2 id="main-title">Music App Vanilla</h2>
+    <div class="music-container">
+      <div class="music-info">
+        <h4 id="music-title">Ukulele</h4>
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <audio src="./music/ukulele.mp3" id="audio"></audio>
+      <div class="img-container">
+        <img src="./images/ukulele.jpg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigator">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="./hthanh-music-app.js"></script>
+  </body>
+</html>

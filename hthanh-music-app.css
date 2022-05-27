@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  background-image: linear-gradient(
+    0deg,
+    rgb(247, 247, 247) 23.8%,
+    rgb(252, 221, 221) 92%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgb(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  position: relative;
+  margin: 100px 0;
+  z-index: 10;
+  border-radius: 10px;
+}
+.music-container h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.img-container {
+  margin: 0 20px;
+  width: 130px;
+  position: relative;
+}
+.img-container img {
+  width: inherit;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  z-index: 1;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.img-container::after {
+  content: "";
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* .music-container .img-container img {
+  animation-play-state: running;
+} */
+
+.navigator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prev,
+#next {
+  color: #ff7194;
+  opacity: 0.5;
+}
+
+.action-btn {
+  border: 0;
+  background-color: #fff;
+
+  font-size: 20px;
+  margin: 0 20px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.action-btn-big {
+  font-size: 30px;
+  color: #888;
+}
+
+.action-btn-big:hover {
+  color: #fe8daa;
+}
+
+.action-btn-big:active {
+  color: #ff4876;
+}
+
+.action-btn-big:focus {
+  outline: none;
+}
+
+.music-info {
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in opacity 0.3s ease-in;
+  padding: 10px 15px 10px 180px;
+}
+
+.music-info h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.progress-container {
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  height: 100%;
+  width: 50%;
+  background-color: #fe8daa;
+  border-radius: 6px;
+}
